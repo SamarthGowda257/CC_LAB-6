@@ -19,6 +19,11 @@ pipeline {
             }
         }
 
+        stage('Build NGINX Image') {
+    steps {
+        sh 'docker build -t custom-nginx ./nginx'
+    }
+}
         stage('Run NGINX') {
             steps {
                 sh '''
