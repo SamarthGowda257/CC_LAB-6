@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/SamarthGowda257/CC_LAB-6.git'
-            }
-        }
-
         stage('Build Backend Image') {
             steps {
                 sh 'docker build -t backend-image ./backend'
